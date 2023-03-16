@@ -10,12 +10,27 @@ namespace TimingAnimationDemo
             Title = "Animation Demo";
 
             
-            TextAnimationUtils.Blink("Hello", 10, 1000, 50);
+//            TextAnimationUtils.Blink(@"
+//                                              .-'''-.     
+//                                .---..---.   '   _    \   
+//   .              __.....__     |   ||   | /   /` '.   \  
+// .'|          .-''         '.   |   ||   |.   |     \  '  
+//<  |         /     .-''""'-.  `. |   ||   ||   '      |  ' 
+// | |        /     /________\   \|   ||   |\    \     / /  
+// | | .'''-. |                  ||   ||   | `.   ` ..' /   
+// | |/.'''. \\    .-------------'|   ||   |    '-...-'`    
+// |  /    | | \    '-.____...---.|   ||   |                
+// | |     | |  `.             .' |   ||   |                
+// | |     | |    `''-...... -'   '---''---'                
+// | '.    | '.                                             
+// '---'   '---'                                            
+//", 10, 1000, 50);
 
             string programmingQuote = @"Words of wisdom:
 Sometimes it's better to leave something alone, to pause,
 and that's very true of programming.
-- Hoyce Wheeler";
+- Joyce Wheeler";
+            TextAnimationUtils.AnimateTyping(programmingQuote, 50);
             WriteLine("\nPress any key to exit...");
             ReadKey(true);
         }
