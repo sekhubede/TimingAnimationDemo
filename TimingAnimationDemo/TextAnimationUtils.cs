@@ -25,12 +25,23 @@ namespace TimingAnimationDemo
             CursorVisible = true;
         }
 
-        public static void AnimateTyping(string text)
+        public static void AnimateTyping(string text, int delay = 25)
         {
             for (int i = 0; i < text.Length; i++)
             {
                 Write(text[i]);
-                Thread.Sleep(100);
+                Thread.Sleep(delay);
+
+                // Skip the animation if a key is pressed.
+                if (KeyAvailable)
+                {
+                    ConsoleKeyInfo keyInfo = ReadKey(true);
+                    if (keyInfo.Key == ConsoleKey.Enter)
+                    {
+                        Write(text.Substring(i + 1));
+                        break;
+                    }
+                }
             }
         }
     }
