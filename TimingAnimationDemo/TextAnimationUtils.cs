@@ -44,5 +44,21 @@ namespace TimingAnimationDemo
                 }
             }
         }
+
+        public static void AnimateFrames(string[] frames, int repeatCount = 5, int delay = 100)
+        {
+            CursorVisible = false;
+            for (int i = 0; i < repeatCount; i++)
+            {
+                foreach (string frame in frames)
+                {
+                    SetCursorPosition(0,0);
+                    //Clear();
+                    WriteLine(frame);
+                    Thread.Sleep(delay);
+                }
+            }
+            CursorVisible = true;
+        }
     }
 }

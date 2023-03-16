@@ -30,7 +30,15 @@ namespace TimingAnimationDemo
 Sometimes it's better to leave something alone, to pause,
 and that's very true of programming.
 - Joyce Wheeler";
-            TextAnimationUtils.AnimateTyping(programmingQuote, 50);
+
+            //TextAnimationUtils.AnimateTyping(programmingQuote, 50);
+
+            // (o_o) (O_o) (o_O)
+            // > v < ^
+            string[] frames = { "(o_o)", "(O_o)", "(o_O)" };
+            //string[] frames = { ">", "v", "<", "^"};
+            TextAnimationUtils.AnimateFrames(frames, 20, 100);
+
             WriteLine("\nPress any key to exit...");
             ReadKey(true);
         }
