@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace TimingAnimationDemo
 {
@@ -6,7 +7,17 @@ namespace TimingAnimationDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Title = "Animation Demo";
+
+            
+            TextAnimationUtils.Blink("Hello", 10, 1000, 50);
+
+            string programmingQuote = @"Words of wisdom:
+Sometimes it's better to leave something alone, to pause,
+and that's very true of programming.
+- Hoyce Wheeler";
+            WriteLine("\nPress any key to exit...");
+            ReadKey(true);
         }
     }
 }
